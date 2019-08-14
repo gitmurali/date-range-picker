@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+  margin: 0 auto;
+  max-width: 56em;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 90% auto;
+  grid-gap: 0.5em;
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+header {
+  background: #1abc9c;
+  font-size: 2em;
+}
+
+footer {
+  background: #283645;
+  color: #fff;
+  font-size: 1em;
+}
+
+header,
+footer,
+main {
+  grid-column: 1 / 5;
+}
+
+main {
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.dateRange-picker__container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.dateRange-picker__label {
+  margin-bottom: .6em;
+}
+
+.dateRange-details{
+  width: 90%;
+  margin: 0 auto;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.dateRange-details__table {
+  display: table;
+  width: 90%;
+  margin: 2em auto;
+}
+
+.dateRange-details__row {
+  display: table-row;
+}
+
+.dateRange-details__cell {
+  border: 1px solid #f2f2f2;
+  display: table-cell;
+  padding: 10px;
+  width: 50%;
+}
+
+.dateRange-details__row:nth-child(even) .dateRange-details__cell {
+  background: #f2f2f2;
+}
+
+.dateRange-details__body {
+  display: table-row-group;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    grid-column: 1 / 5;
+  }
+}
