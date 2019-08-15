@@ -6,6 +6,7 @@ import { countDays, leapYear } from "../helpers/index";
 import Spinner from "../svg/rolling.svg";
 
 const ShowDateRangeDetails = lazy(() => import("./DateRangeDetails"));
+let headers = {"Access-Control-Allow-Origin": "*"};
 
 const DateRangeSelection = () => {
   const [date, setDate] = useState([new Date(), new Date()]);
@@ -42,7 +43,7 @@ const DateRangeSelection = () => {
           .get(
             `http://numbersapi.com/${start ? start.getMonth() + 1 : ""}/${
               start ? start.getDate() : ""
-            }/date`
+            }/date`, headers
           )
           .then(function(response) {
             setMessageFromDateApi(response.data);
