@@ -1,7 +1,7 @@
 # Date range picker
 
 ## Detailed view
-![landing page date range picker defaults]()
+![landing page date range picker defaults](https://raw.githubusercontent.com/gitmurali/date-range-picker/master/src/images/app.png)
 
 ## Quick start
 
