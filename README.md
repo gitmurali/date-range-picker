@@ -8,7 +8,7 @@
 (make sure it's on http as the numbersapi doesn't work on https)
 http://muraliprashanth.me/vat_global/index.html
 
-## Quick start
+## How to run
 
 Clone this repo using git clone https://github.com/gitmurali/date-range-picker.git
 
