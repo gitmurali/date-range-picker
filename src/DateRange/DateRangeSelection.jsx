@@ -2,7 +2,7 @@ import React, { useState, useEffect, Suspense, lazy } from "react";
 import DateRangePicker from "@wojtekmaj/react-daterange-picker";
 import axios from "axios";
 import "./dateRange.css";
-import { countDays, leapYear } from "../helpers/index";
+import { countDays, isLeapYear } from "../helpers/index";
 import Spinner from "../images/rolling.svg";
 
 const ShowDateRangeDetails = lazy(() => import("./DateRangeDetails"));
@@ -28,8 +28,8 @@ const DateRangeSelection = () => {
       const numberOfMondays = countDays([1], startDate, endDate);
       setDatesDiff(diffDays);
       setNumberOfMondaysInDateRange(numberOfMondays);
-      setIsStartDateInLeapYear(leapYear(startDate.getFullYear()));
-      setIsEndDateInLeapYear(leapYear(endDate.getFullYear()));
+      setIsStartDateInLeapYear(isLeapYear(startDate.getFullYear()));
+      setIsEndDateInLeapYear(isLeapYear(endDate.getFullYear()));
     };
 
     handleSubmit();
@@ -51,7 +51,7 @@ const DateRangeSelection = () => {
           })
           .catch(function(error) {
             // log errors
-            console.log(error);
+            console.error(error);
           });
       }
     };

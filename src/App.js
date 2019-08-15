@@ -1,5 +1,5 @@
 import React from 'react';
-import DateRangeSelection from './DateRange/DateRangeSelection';
+import DateRangeSelection from './dateRange/DateRangeSelection';
 
 function App() {
   return (
