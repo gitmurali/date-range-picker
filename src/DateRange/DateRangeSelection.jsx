@@ -3,10 +3,10 @@ import DateRangePicker from "@wojtekmaj/react-daterange-picker";
 import axios from "axios";
 import "./dateRange.css";
 import { countDays, leapYear } from "../helpers/index";
-import Spinner from "../svg/rolling.svg";
+import Spinner from "../images/rolling.svg";
 
 const ShowDateRangeDetails = lazy(() => import("./DateRangeDetails"));
-let headers = {"Access-Control-Allow-Origin": "*"};
+let headers = { "Access-Control-Allow-Origin": "*" };
 
 const DateRangeSelection = () => {
   const [date, setDate] = useState([new Date(), new Date()]);
@@ -43,7 +43,8 @@ const DateRangeSelection = () => {
           .get(
             `http://numbersapi.com/${start ? start.getMonth() + 1 : ""}/${
               start ? start.getDate() : ""
-            }/date`, headers
+            }/date`,
+            headers
           )
           .then(function(response) {
             setMessageFromDateApi(response.data);
