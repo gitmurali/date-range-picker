@@ -3,6 +3,9 @@
 ## Detailed view
 ![landing page date range picker defaults](https://raw.githubusercontent.com/gitmurali/date-range-picker/master/src/images/app.png)
 
+## Access the above app at
+    https://muraliprashanth.me/vat_global/index.html (make sure it's on http as the numbersapi doesn't work on https)
+
 ## Quick start
 
 Clone this repo using git clone https://github.com/gitmurali/date-range-picker.git
