@@ -6,7 +6,7 @@
 ## Access the above app at
 
 (make sure it's on http as the numbersapi doesn't work on https)
-https://muraliprashanth.me/vat_global/index.html
+http://muraliprashanth.me/vat_global/index.html
 
 ## Quick start
 
